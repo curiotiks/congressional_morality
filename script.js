@@ -34,10 +34,10 @@ function drawDots(data) {
      Republicans will sit from π/2 → 0  (right half, 90° span)
   ---------------------------------------------------------------------*/
 
-  const startDem = Math.PI - 10;        // 180°
+  const startDem = 0;        // 180°
   const endDem   = Math.PI / 2;    //  90°
   const startRep = Math.PI / 2;    //  90°
-  const endRep   = 0;              //   0°
+  const endRep   = Math.PI;              //   0°
 
   const stepDem  = (endDem - startDem) / (dems.length + 1); // negative
   const stepRep  = (endRep - startRep) / (reps.length + 1); // negative
