@@ -19,35 +19,50 @@ function filterData(category) {
 function drawDots(data) {
   svg.selectAll("circle").remove();
 
-  const angleStep = Math.PI / data.length;
+  const dems = data.filter(d => d.party === "D");
+  const reps = data.filter(d => d.party === "R");
 
-  svg.selectAll("circle")
-    .data(data)
+  const demArc = Math.PI; // 180°
+  const repArc = Math.PI;
+
+  const angleStepDem = demArc / (dems.length + 1);
+  const angleStepRep = repArc / (reps.length + 1);
+
+  // Draw Democrats on the LEFT
+  svg.selectAll(".dot.dem")
+    .data(dems)
     .enter()
     .append("circle")
-    .attr("class", "dot")
+    .attr("class", "dot dem")
     .attr("r", 6)
+    .attr("fill", "blue")
     .attr("cx", (d, i) => {
-      const angle = i * angleStep - Math.PI / 2;
-      const r = radius;
-      return width / 2 + r * Math.cos(angle);
+      const angle = Math.PI + (i + 1) * angleStepDem;
+      return width / 2 + radius * Math.cos(angle);
     })
     .attr("cy", (d, i) => {
-      const angle = i * angleStep - Math.PI / 2;
-      const r = radius;
-      return height / 1.1 + r * Math.sin(angle);
+      const angle = Math.PI + (i + 1) * angleStepDem;
+      return height / 1.1 + radius * Math.sin(angle);
     })
-    .attr("fill", d => d.party === "R" ? "red" : "blue")
-    .on("mouseover", function (event, d) {
-      tooltip
-        .style("left", event.pageX + 10 + "px")
-        .style("top", event.pageY - 30 + "px")
-        .style("display", "block")
-        .html(`<strong>${d.name} (${d.party}-${d.state})</strong><br>
-               ${d.office}, ${d.year}<br>
-               <em>${d.category}</em><br>
-               ${d.allegations}<br>
-               <small>${d.status}</small>`);
+    .on("mouseover", showTooltip)
+    .on("mouseout", hideTooltip);
+
+  // Draw Republicans on the RIGHT
+  svg.selectAll(".dot.rep")
+    .data(reps)
+    .enter()
+    .append("circle")
+    .attr("class", "dot rep")
+    .attr("r", 6)
+    .attr("fill", "red")
+    .attr("cx", (d, i) => {
+      const angle = -Math.PI + (i + 1) * angleStepRep;
+      return width / 2 + radius * Math.cos(angle);
     })
-    .on("mouseout", () => tooltip.style("display", "none"));
+    .attr("cy", (d, i) => {
+      const angle = -Math.PI + (i + 1) * angleStepRep;
+      return height / 1.1 + radius * Math.sin(angle);
+    })
+    .on("mouseover", showTooltip)
+    .on("mouseout", hideTooltip);
 }
