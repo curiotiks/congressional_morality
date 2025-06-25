@@ -17,54 +17,62 @@ function filterData(category) {
 }
 
 function drawDots(data) {
-  svg.selectAll("circle").remove();
+  svg.selectAll(".dot").remove();
 
   const dems = data.filter(d => d.party === "D");
   const reps = data.filter(r => r.party === "R");
 
-  const demArc = Math.PI; // 180°
-  const repArc = Math.PI;
+  /* ---  NEW ANGLE RANGES  --------------------------------------------
+     π   (180°)  ← leftmost
+     π/2 ( 90°)  ← top-center
+       0 (  0°)  ← rightmost
+     Democrats will sit from π   → π/2  (left half, 90° span)
+     Republicans will sit from π/2 → 0  (right half, 90° span)
+  ---------------------------------------------------------------------*/
 
-  const angleStepDem = demArc / (dems.length + 1);
-  const angleStepRep = repArc / (reps.length + 1);
+  const startDem = Math.PI;        // 180°
+  const endDem   = Math.PI / 2;    //  90°
+  const startRep = Math.PI / 2;    //  90°
+  const endRep   = 0;              //   0°
 
-  // Draw Democrats on the LEFT
+  const stepDem  = (endDem - startDem) / (dems.length + 1); // negative
+  const stepRep  = (endRep - startRep) / (reps.length + 1); // negative
+
+  // 🔵 Democrats (LEFT 90°)
   svg.selectAll(".dot.dem")
     .data(dems)
-    .enter()
-    .append("circle")
-    .attr("class", "dot dem")
-    .attr("r", 6)
-    .attr("fill", "blue")
-    .attr("cx", (d, i) => {
-      const angle = Math.PI + (i + 1) * angleStepDem;
-      return width / 2 + radius * Math.cos(angle);
-    })
-    .attr("cy", (d, i) => {
-      const angle = Math.PI + (i + 1) * angleStepDem;
-      return height / 1.1 + radius * Math.sin(angle);
-    })
-    .on("mouseover", showTooltip)
-    .on("mouseout", hideTooltip);
+    .enter().append("circle")
+      .attr("class", "dot dem")
+      .attr("r", 6)
+      .attr("fill", "blue")
+      .attr("cx", (d, i) => {
+        const a = startDem + (i + 1) * stepDem;
+        return width / 2 + radius * Math.cos(a);
+      })
+      .attr("cy", (d, i) => {
+        const a = startDem + (i + 1) * stepDem;
+        return height / 1.2 + radius * Math.sin(a);   // adjust 1.2 to lift/lower arch
+      })
+      .on("mouseover", showTooltip)
+      .on("mouseout", hideTooltip);
 
-  // Draw Republicans on the RIGHT
+  // 🔴 Republicans (RIGHT 90°)
   svg.selectAll(".dot.rep")
     .data(reps)
-    .enter()
-    .append("circle")
-    .attr("class", "dot rep")
-    .attr("r", 6)
-    .attr("fill", "red")
-    .attr("cx", (d, i) => {
-      const angle = -Math.PI + (i + 1) * angleStepRep;
-      return width / 2 + radius * Math.cos(angle);
-    })
-    .attr("cy", (d, i) => {
-      const angle = -Math.PI + (i + 1) * angleStepRep;
-      return height / 1.1 + radius * Math.sin(angle);
-    })
-    .on("mouseover", showTooltip)
-    .on("mouseout", hideTooltip);
+    .enter().append("circle")
+      .attr("class", "dot rep")
+      .attr("r", 6)
+      .attr("fill", "red")
+      .attr("cx", (d, i) => {
+        const a = startRep + (i + 1) * stepRep;
+        return width / 2 + radius * Math.cos(a);
+      })
+      .attr("cy", (d, i) => {
+        const a = startRep + (i + 1) * stepRep;
+        return height / 1.2 + radius * Math.sin(a);
+      })
+      .on("mouseover", showTooltip)
+      .on("mouseout", hideTooltip);
 }
 
 function showTooltip(event, d) {
