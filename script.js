@@ -51,7 +51,7 @@ function drawDots(data) {
       })
       .attr("cy", (d, i) => {
         const a = startDem + (i + 1) * stepDem;
-        return height / 1.2 + radius * Math.sin(a);   // adjust 1.2 to lift/lower arch
+        return height / 1.5 + radius * Math.sin(a);   // adjust 1.2 to lift/lower arch
       })
       .on("mouseover", showTooltip)
       .on("mouseout", hideTooltip);
