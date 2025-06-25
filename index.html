@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Congress Ethics Violations</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    body { font-family: sans-serif; text-align: center; }
+    .dot { cursor: pointer; }
+    .tooltip {
+      position: absolute; background: #fff; border: 1px solid #aaa;
+      padding: 8px; font-size: 14px; pointer-events: none;
+    }
+    .button-group button {
+      margin: 5px; padding: 5px 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Congressional Ethics Violations</h1>
+  <div class="button-group">
+    <button onclick="filterData('All')">All</button>
+    <button onclick="filterData('Sexual')">Sexual</button>
+    <button onclick="filterData('Financial')">Financial</button>
+    <button onclick="filterData('Forgery or Misrepresentation')">Forgery</button>
+    <button onclick="filterData('Other')">Other</button>
+  </div>
+  <svg width="800" height="400"></svg>
+  <div class="tooltip" style="display: none;"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
