@@ -66,3 +66,19 @@ function drawDots(data) {
     .on("mouseover", showTooltip)
     .on("mouseout", hideTooltip);
 }
+
+function showTooltip(event, d) {
+  tooltip
+    .style("left", event.pageX + 10 + "px")
+    .style("top", event.pageY - 30 + "px")
+    .style("display", "block")
+    .html(`<strong>${d.name} (${d.party}-${d.state})</strong><br>
+           ${d.office}, ${d.year}<br>
+           <em>${d.category}</em><br>
+           ${d.allegations}<br>
+           <small>${d.status}</small>`);
+}
+
+function hideTooltip() {
+  tooltip.style("display", "none");
+}
