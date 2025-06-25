@@ -1,6 +1,10 @@
 const width = 800;
 const height = 400;
 const radius = 300;
+
+const cx = width  / 2;      // horizontal centre
+const cy = height - 20;     // put full circle’s centre 20 px above the bottom
+
 const svg = d3.select("svg");
 const tooltip = d3.select(".tooltip");
 
