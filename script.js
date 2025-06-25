@@ -20,7 +20,7 @@ function drawDots(data) {
   svg.selectAll("circle").remove();
 
   const dems = data.filter(d => d.party === "D");
-  const reps = data.filter(d => d.party === "R");
+  const reps = data.filter(r => r.party === "R");
 
   const demArc = Math.PI; // 180°
   const repArc = Math.PI;
