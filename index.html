@@ -14,6 +14,31 @@
     .button-group button {
       margin: 5px; padding: 5px 10px;
     }
+    .tooltip {
+      position: absolute;
+      background: white;
+      border: 1px solid #999;
+      padding: 10px;
+      font-size: 14px;
+      max-width: 300px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.2);
+      pointer-events: none;
+      display: none;
+      z-index: 9999;
+    }
+    .description {
+      width: 800px;
+      margin: 20px auto 0 auto; /* centered */
+      font-family: sans-serif;
+      font-size: 24px;
+      line-height: 2;
+      color: #333;
+      background: #f9f9f9;
+      padding: 12px 16px;
+      border-radius: 8px;
+      box-shadow: 0 0 4px rgba(0,0,0,0.1);
+    }
+
   </style>
 </head>
 <body>
@@ -22,12 +47,26 @@
     <button onclick="filterData('All')">All</button>
     <button onclick="filterData('Sexual')">Sexual</button>
     <button onclick="filterData('Financial')">Financial</button>
-    <button onclick="filterData('Forgery or Misrepresentation')">Forgery</button>
-    <button onclick="filterData('Other')">Other</button>
   </div>
   <svg width="800" height="400"></svg>
+  <div class="description">
+
+  <div>
+    <p><strong>Question:</strong> Which of the two largest political parties have been caught in more immoral or illegal activities?</p>
+
+    <p style="text-align: left;">
+      I’ll admit, with some bias, that I already suspected the answer would be the Republicans. The purpose of this visualization is to draw attention to the hypocrisy within the party that brands itself as the champion of “family values.”
+    </p>
+
+    <p style="text-align: left;">
+      This visualization highlights publicly known ethical and moral violations committed by U.S. Congress members since 1990. Each dot represents one politician. Democrats are shown on the left, Republicans on the right. Dot color reflects party affiliation, and hovering over a dot reveals detailed allegations. You can filter the cases using the buttons above.
+    </p>
+  </div>
   <div class="tooltip" style="display: none;"></div>
 
   <script src="script.js"></script>
+
+
+
 </body>
 </html>

@@ -8,9 +8,7 @@
     "allegationGroup": "Gold Bribery Scandal",
     "allegations": "Bribery, gold bars, cash, acting as foreign agent (Egypt), obstruction",
     "status": "Convicted 2024",
-    "category": "Financial",
-    "photoUrl": "images/menendez.jpg",
-    "isMinorInvolved": true
+    "category": "Financial"
   },
   {
     "year": "2000\u20132005",
@@ -21,8 +19,7 @@
     "allegationGroup": "",
     "allegations": "Accepted $2.4M in bribes, lavish gifts for defense contracts",
     "status": "Guilty plea 2005; served 8\u00bd years",
-    "category": "Financial",
-    "photoUrl": "images/cunningham.jpg"
+    "category": "Financial"
   },
   {
     "year": "2018\u20132023",
@@ -33,8 +30,7 @@
     "allegationGroup": "",
     "allegations": "Insider trading on Sprint and Guidehouse deals (~$320k profit)",
     "status": "Convicted 2023",
-    "category": "Financial",
-    "photoUrl": "images/buyer.jpg"
+    "category": "Financial"
   },
   {
     "year": "2017\u20132023",
@@ -45,8 +41,7 @@
     "allegationGroup": "",
     "allegations": "Insider trading in biotech stock (~$570k gain)",
     "status": "Convicted; pardoned",
-    "category": "Financial",
-    "photoUrl": "images/collins.jpg"
+    "category": "Financial"
   },
   {
     "year": "2024",
@@ -57,8 +52,7 @@
     "allegationGroup": "",
     "allegations": "$600k in bribes, foreign-agent fraud",
     "status": "Indicted 2024",
-    "category": "Financial",
-    "photoUrl": "images/cuellar.jpg"
+    "category": "Financial"
   },
   {
     "year": "2010",
@@ -69,8 +63,7 @@
     "allegationGroup": "",
     "allegations": "Misuse of letterhead, undeclared foreign income, rent benefits",
     "status": "Censured 2010",
-    "category": "Financial",
-    "photoUrl": "images/rangel.jpg"
+    "category": "Financial"
   },
   {
     "year": "2020",
@@ -81,8 +74,7 @@
     "allegationGroup": "COVID Insider Trading",
     "allegations": "Sold stocks after COVID briefing",
     "status": "No charges",
-    "category": "Financial",
-    "photoUrl": "images/burr.jpg"
+    "category": "Financial"
   },
   {
     "year": "2020",
@@ -93,8 +85,7 @@
     "allegationGroup": "COVID Insider Trading",
     "allegations": "Sold stocks after COVID briefing",
     "status": "No charges",
-    "category": "Financial",
-    "photoUrl": "images/loeffler.jpg"
+    "category": "Financial"
   },
   {
     "year": "2020",
@@ -105,8 +96,7 @@
     "allegationGroup": "COVID Insider Trading",
     "allegations": "Sold stocks after COVID briefing",
     "status": "No charges",
-    "category": "Financial",
-    "photoUrl": "images/feinstein.jpg"
+    "category": "Financial"
   },
   {
     "year": "2020",
@@ -117,8 +107,7 @@
     "allegationGroup": "COVID Insider Trading",
     "allegations": "Sold stocks after COVID briefing",
     "status": "No charges",
-    "category": "Financial",
-    "photoUrl": "images/perdue.jpg"
+    "category": "Financial"
   },
   {
     "year": "1991\u20131995",
@@ -129,8 +118,7 @@
     "allegationGroup": "",
     "allegations": "Sexual harassment/assault of 18+ women",
     "status": "Resigned",
-    "category": "Sexual",
-    "photoUrl": "images/packwood.jpg"
+    "category": "Sexual"
   },
   {
     "year": "1991\u20131995",
@@ -141,8 +129,7 @@
     "allegationGroup": "",
     "allegations": "Sexual harassment and rape allegations",
     "status": "Did not seek reelection",
-    "category": "Sexual",
-    "photoUrl": "images/adams.jpg"
+    "category": "Sexual"
   },
   {
     "year": "1989\u20131994",
@@ -153,8 +140,7 @@
     "allegationGroup": "",
     "allegations": "Convicted of statutory rape of a 16-year-old",
     "status": "Served 30 days",
-    "category": "Sexual",
-    "photoUrl": "images/lukens.jpg"
+    "category": "Sexual"
   },
   {
     "year": "1994\u20131995",
@@ -165,8 +151,7 @@
     "allegationGroup": "",
     "allegations": "Statutory rape of 16-year-old campaign worker",
     "status": "Convicted, resigned",
-    "category": "Sexual",
-    "photoUrl": "images/reynolds.jpg"
+    "category": "Sexual"
   },
   {
     "year": "1983",
@@ -177,8 +162,7 @@
     "allegationGroup": "House Page Scandal",
     "allegations": "Sex with 17-year-old page",
     "status": "Censured; lost reelection",
-    "category": "Sexual",
-    "photoUrl": "images/crane.jpg"
+    "category": "Sexual"
   },
   {
     "year": "1983",
@@ -189,8 +173,7 @@
     "allegationGroup": "House Page Scandal",
     "allegations": "Sex with 17-year-old male page",
     "status": "Censured; re-elected",
-    "category": "Sexual",
-    "photoUrl": "images/studds.jpg"
+    "category": "Sexual"
   },
   {
     "year": "2006",
@@ -201,8 +184,7 @@
     "allegationGroup": "House Page Scandal",
     "allegations": "Sexual messages to underage congressional pages",
     "status": "Resigned",
-    "category": "Sexual",
-    "photoUrl": "images/foley.jpg"
+    "category": "Sexual"
   },
   {
     "year": "2007\u20132011",
@@ -213,8 +195,7 @@
     "allegationGroup": "",
     "allegations": "Affair with aide\u2019s wife, hush payments, obstruction",
     "status": "Resigned 2011",
-    "category": ["Sexual", "Financial"],
-    "photoUrl": "images/ensign.jpg"
+    "category": "Sexual"
   },
   {
     "year": "2011\u20132018",
@@ -225,8 +206,7 @@
     "allegationGroup": "",
     "allegations": "Sexual harassment; $84k taxpayer-funded settlement",
     "status": "Resigned 2018",
-    "category": ["Sexual", "Financial"],
-    "photoUrl": "images/farenthold.jpg"
+    "category": "Sexual"
   },
   {
     "year": "2017\u20132024",
@@ -237,8 +217,7 @@
     "allegationGroup": "",
     "allegations": "Prostitution, drug use, sex with minor, obstruction",
     "status": "Ethics report; no charges",
-    "category": "Sexual",
-    "photoUrl": "images/gaetz.jpg"
+    "category": "Sexual"
   },
   {
     "year": "2023\u20132025",
@@ -249,31 +228,6 @@
     "allegationGroup": "",
     "allegations": "Fabricated r\u00e9sum\u00e9, campaign finance fraud, 13-count indictment",
     "status": "Ongoing ethics and legal action",
-    "category": "Financial",
-    "photoUrl": "images/santos.jpg"
-  },
-  {
-    "year": "2016–2024",
-    "name": "Donald Trump",
-    "party": "R",
-    "state": "FL",
-    "office": "President",
-    "allegationGroup": "Multiple Legal Cases",
-    "allegations": "Hush money payments, election interference, obstruction, classified document mishandling, civil sexual abuse liability",
-    "status": "Convicted (34 felony counts, 2024); multiple cases ongoing",
-    "category": ["Sexual", "Financial"],
-    "photoUrl": "images/trump.jpg"
-  },
-  {
-    "year": "1993–2001",
-    "name": "Bill Clinton",
-    "party": "D",
-    "state": "AR",
-    "office": "President",
-    "allegationGroup": "Lewinsky Scandal and Related Allegations",
-    "allegations": "Perjury, obstruction of justice, sexual misconduct allegations, inappropriate relationship with intern",
-    "status": "Impeached; acquitted by Senate",
-    "category": "Sexual",
-    "photoUrl": "images/clinton.jpg"
+    "category": "Financial"
   }
 ]
